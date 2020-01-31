@@ -3,28 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
-    public float speed;
+    public Vector3 targetVector;//x值为左右移动,z值为前后移动
+    public bool move;//是否移动
+    public bool up;
+    public bool down;
+    public bool left;
+    public bool right;
+    void Awake() {
 
-    public Animator animator;
-    // Start is called before the first frame update
+    }
+
     void Start() {
-        speed = 5;
-        animator = transform.GetComponent<Animator>();
+        down=left=right=up = false;
+        move = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.D)) {
-            animator.SetBool("move",true);
-            animator.SetBool("idle", false);
-        }
+    void Update() {
+        up = Input.GetKey(KeyCode.W);
+        down = Input.GetKey(KeyCode.S);
+        left = Input.GetKey(KeyCode.A);
+        right = Input.GetKey(KeyCode.D);
 
-        if (!Input.anyKey) {
-            animator.SetBool("idle", true);
-            animator.SetBool("move", false);
-        }
-        //控制物体的移动
-        this.transform.Translate(new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0, Input.GetAxis("Vertical") * Time.deltaTime * speed));
+        targetVector = SquareToCircle((right ? 1 : 0) - (left ? 1 : 0), (up ? 1 : 0) - (down ? 1 : 0));
+        
+        move = up || down || left || right;
     }
+
+    Vector3 SquareToCircle(float x, float z) {
+        Vector3 circleVector;
+        //球坐标z
+        circleVector.x= x * Mathf.Sqrt(1 - Mathf.Pow(z, 2) / 2);
+        //球坐标x
+        circleVector.z= z * Mathf.Sqrt(1 - Mathf.Pow(x, 2) / 2);
+
+        circleVector.y = 0;
+        return circleVector;
+    }
+
 }
