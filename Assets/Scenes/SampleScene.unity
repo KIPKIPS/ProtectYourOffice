@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 290412181}
   - component: {fileID: 290412178}
   - component: {fileID: 290412182}
+  - component: {fileID: 290412179}
   m_Layer: 0
   m_Name: PlayerHandle
   m_TagString: Untagged
@@ -152,6 +153,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &290412179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290412177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf95b290813af147a15d371ee0d6ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model: {fileID: 0}
+  pi: {fileID: 0}
+  animator: {fileID: 0}
+  blend: 0
 --- !u!4 &290412181
 Transform:
   m_ObjectHideFlags: 0
