@@ -43,9 +43,20 @@ public class PlayerInput : MonoBehaviour {
         //对输入值进行插值计算
         Dup = Mathf.SmoothDamp(Dup, targetDup, ref velocityDup, 0.1f);
         Dright = Mathf.SmoothDamp(Dright, targetDright, ref velocityDright, 0.1f);
-        
-        Dmag = Mathf.Sqrt(Dup * Dup + Dright * Dright);//计算玩家输入量
-        Dvec =  Dright * transform.right+ Dup * transform.forward;//计算目标朝向
+
+        Vector2 temp = SquareToCircle(Dright,Dup);//将直角坐标改为球形坐标
+
+        Dmag = Mathf.Sqrt(temp.x * temp.x + temp.y * temp.y);//计算玩家输入量
+        Dvec = temp.x * transform.right + temp.y * transform.forward;//计算目标朝向
     }
-    
+    //球形函数
+    Vector2  SquareToCircle(float x, float y) {
+        Vector2 circleVector;
+        //球坐标x
+        circleVector.x = x * Mathf.Sqrt(1 - (y * y) / 2.0f);
+        //球坐标y
+        circleVector.y = y * Mathf.Sqrt(1 - (x * x) / 2.0f);
+        return circleVector;
+    }
+
 }

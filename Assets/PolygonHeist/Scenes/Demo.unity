@@ -9886,6 +9886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_DisplayCase_04
       objectReference: {fileID: 0}
+    - target: {fileID: 132572, guid: 45d38c66a98abcc45b5185c2654e6780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400500, guid: 45d38c66a98abcc45b5185c2654e6780, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13
@@ -9917,10 +9921,6 @@ PrefabInstance:
     - target: {fileID: 400500, guid: 45d38c66a98abcc45b5185c2654e6780, type: 3}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 132572, guid: 45d38c66a98abcc45b5185c2654e6780, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2327572, guid: 45d38c66a98abcc45b5185c2654e6780, type: 3}
       propertyPath: m_CastShadows
@@ -18553,11 +18553,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2374252, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
+    - target: {fileID: 2343478, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2343478, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
+    - target: {fileID: 2374252, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
@@ -18696,11 +18696,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2374252, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
+    - target: {fileID: 2343478, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2343478, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
+    - target: {fileID: 2374252, guid: 6799b28e1249bcf40bac903b6b24b5f2, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
@@ -26409,6 +26409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_Glass_DoorFrame_03
       objectReference: {fileID: 0}
+    - target: {fileID: 122474, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 496904, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -26445,15 +26449,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 2380818, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
+    - target: {fileID: 2362848, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 122474, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362848, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
+    - target: {fileID: 2380818, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
@@ -38599,6 +38599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_Glass_Ground_03
       objectReference: {fileID: 0}
+    - target: {fileID: 128772, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 493026, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -38633,10 +38637,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2319836, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
       propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 128772, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2352300, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
@@ -49882,6 +49882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_Glass_Ground_04
       objectReference: {fileID: 0}
+    - target: {fileID: 128772, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 493026, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -49916,10 +49920,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2319836, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
       propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 128772, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2352300, guid: 9e511af3be42ada47b51e676865ad39e, type: 3}
@@ -50133,6 +50133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_Glass_DoorFrame_02
       objectReference: {fileID: 0}
+    - target: {fileID: 122474, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 496904, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -50165,15 +50169,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 300
       objectReference: {fileID: 0}
-    - target: {fileID: 2380818, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
+    - target: {fileID: 2362848, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 122474, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362848, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
+    - target: {fileID: 2380818, guid: b8034e34cca7e354ebc7f2cedabbeae0, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
