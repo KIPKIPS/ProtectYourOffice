@@ -21,9 +21,10 @@ public class PlayerInput : MonoBehaviour {
     public bool inputEnable = true;
 
     public float Dmag;//动画的forward值,代表玩家是否有输入,玩家输入量
-    public Vector3 Dvec;//目标朝向
-    void Awake() {
+    public Vector3 Dvec;//目标朝向值
 
+    void Awake() {
+        inputEnable = true;
     }
 
     void Start() {
@@ -31,18 +32,20 @@ public class PlayerInput : MonoBehaviour {
     }
 
     void Update() {
-        //目标值
+        
+        //玩家输入目标值
         targetDup = (Input.GetKey(keyUp) ? 1.0f : 0) - (Input.GetKey(keyDown) ? 1.0f : 0);
         targetDright = (Input.GetKey(keyRight) ? 1.0f : 0) - (Input.GetKey(keyLeft) ? 1.0f : 0);
         if (inputEnable==false) {
             targetDup = 0;
             targetDright = 0;
         }
+        //对输入值进行插值计算
         Dup = Mathf.SmoothDamp(Dup, targetDup, ref velocityDup, 0.1f);
         Dright = Mathf.SmoothDamp(Dright, targetDright, ref velocityDright, 0.1f);
-
-        Dmag = Mathf.Sqrt(Dup * Dup + Dright * Dright);
-        Dvec =  Dright * transform.right+ Dup * transform.forward;
+        
+        Dmag = Mathf.Sqrt(Dup * Dup + Dright * Dright);//计算玩家输入量
+        Dvec =  Dright * transform.right+ Dup * transform.forward;//计算目标朝向
     }
     
 }

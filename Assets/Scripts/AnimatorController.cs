@@ -30,15 +30,18 @@ public class AnimatorController : MonoBehaviour {
         //设置动画混合值
         animator.SetFloat("forward", pi.Dmag);
         if (pi.Dmag > 0.1f) {
-            Vector3 tempDir = Vector3.Slerp(model.transform.forward, pi.Dvec, 0.1f);//转向的平滑插值
-            Debug.DrawRay(model.transform.position, tempDir, Color.red, 200);
-            model.transform.forward = tempDir;
+            model.transform.forward = Vector3.Slerp(model.transform.forward, pi.Dvec, 0.4f);//转向的平滑插值
         }
+
         movingVec = pi.Dmag * model.transform.forward * walkSpeed;
     }
 
     void FixedUpdate() {
         //rigid.position+=movingVec*Time.fixedDeltaTime;
-        rigid.velocity = movingVec;
+        //防止对象坐标的y值受到移动值的影响
+        rigid.velocity = new Vector3(movingVec.x, rigid.velocity.y, movingVec.z);
+
+        
+
     }
 }
