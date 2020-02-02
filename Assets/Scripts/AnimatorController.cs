@@ -16,7 +16,7 @@ public class AnimatorController : MonoBehaviour {
     public bool lockPlanar=false;//是否锁定平面移动量
     public Vector3 thrustVec;//冲量
 
-    public bool slow=false;
+    public bool animEasing = false;
 
     void Awake() {
         //初始化
@@ -33,7 +33,7 @@ public class AnimatorController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         //设置动画混合值
-        if (slow) {
+        if (animEasing) {
             pi.Dup /= 8;
             pi.Dright /= 8;
         }
@@ -56,14 +56,14 @@ public class AnimatorController : MonoBehaviour {
         print("On Attack Enter");
         //攻击时关闭输入防止位移
         //pi.inputEnable = false;
-        slow = true;
+        animEasing = true;//开启缓动
         animator.SetLayerWeight(animator.GetLayerIndex("Attack"),1.0f);
         //lockPlanar = true;
     }
     void OnAttack_01_Exit() {
         print("On Attack Exit");
         //pi.inputEnable = true;
-        slow = false;
+        animEasing = false;
         animator.SetLayerWeight(animator.GetLayerIndex("Attack"), 0f);
     }
 

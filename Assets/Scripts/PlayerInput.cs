@@ -59,15 +59,12 @@ public class PlayerInput : MonoBehaviour {
 
         //攻击 鼠标左键Down下
         bool newAttack = Input.GetMouseButton(mouseLeft);
-        if (newAttack!=lastAttack&&newAttack==true) {
-            attack = true;
-        }
-        else {
-            attack = false;
-        }
+        //如果新的Attack值不等于上一次的Attack值,并且新的Attack值为true,则将attack为true
+        attack =newAttack != lastAttack && newAttack;
         lastAttack = newAttack;
+
     }
-    //球形函数
+    //球形函数,将直角坐标转换为球形坐标
     Vector2  SquareToCircle(float x, float y) {
         Vector2 circleVector;
         //球坐标x
