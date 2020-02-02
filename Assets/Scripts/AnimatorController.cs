@@ -40,12 +40,19 @@ public class AnimatorController : MonoBehaviour {
         }
     }
 
+    void OnAttackEnter() {
+        //print("On Attack Enter");
+        //攻击时关闭输入防止位移
+        pi.inputEnable = false;
+    }
+    void OnAttackExit() {
+        //print("On Attack Exit");
+        pi.inputEnable = true;
+    }
+
     void FixedUpdate() {
         //rigid.position+=movingVec*Time.fixedDeltaTime;
         //防止对象坐标的y值受到移动值的影响
         rigid.velocity = new Vector3(movingVec.x, rigid.velocity.y, movingVec.z);
-
-        
-
     }
 }

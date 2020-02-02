@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\AnimatorController.cs" />
     <Compile Include="Assets\Scripts\FSMClearSignals.cs" />
     <Compile Include="Assets\Scripts\FSMOnEnter.cs" />
+    <Compile Include="Assets\Scripts\FSMOnExit.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity_WorkStation/King_Of_Destruction/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
