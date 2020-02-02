@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444644, guid: cf78ac9b09f3f284f8988b9e77af54bb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444644, guid: cf78ac9b09f3f284f8988b9e77af54bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1a92d5ecbadb02844a33d54d273432fc, type: 2}
     - target: {fileID: 9559342, guid: cf78ac9b09f3f284f8988b9e77af54bb, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf78ac9b09f3f284f8988b9e77af54bb, type: 3}
@@ -263,8 +263,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 963194228}
   - {fileID: 1547912460}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -284,11 +284,16 @@ MonoBehaviour:
   keyDown: s
   keyLeft: a
   keyRight: d
+  mouseLeft: 0
+  mouseRight: 1
+  mouseMiddle: 2
   Dup: 0
   Dright: 0
   inputEnable: 1
   Dmag: 0
   Dvec: {x: 0, y: 0, z: 0}
+  attack: 0
+  lastAttack: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +367,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.52e-43, y: NaN, z: 7.52e-43, w: 2.3185669e-29}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -461,7 +466,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 290412181}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 28.976002, y: 0, z: 0}
 --- !u!4 &1547912460 stripped
 Transform:

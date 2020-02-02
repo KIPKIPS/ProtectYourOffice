@@ -30,7 +30,8 @@ public class AnimatorController : MonoBehaviour {
         //设置动画混合值
         animator.SetFloat("forward", pi.Dmag);
         if (pi.Dmag > 0.1f) {
-            model.transform.forward = Vector3.Slerp(model.transform.forward, pi.Dvec, 0.4f);//转向的平滑插值
+            //转向的平滑插值 防止转向过于突然
+            model.transform.forward = Vector3.Slerp(model.transform.forward, pi.Dvec, 0.4f);//t值太大,转向太突然,太小导致转向发生位移
         }
 
         movingVec = pi.Dmag * model.transform.forward * walkSpeed;
@@ -40,14 +41,19 @@ public class AnimatorController : MonoBehaviour {
         }
     }
 
-    void OnAttackEnter() {
+    void OnAttack_01_Enter() {
         //print("On Attack Enter");
         //攻击时关闭输入防止位移
-        pi.inputEnable = false;
+        //pi.inputEnable = false;
+        animator.SetLayerWeight(animator.GetLayerIndex("attack"),1.0f);
     }
-    void OnAttackExit() {
+    void OnAttack_01_Exit() {
         //print("On Attack Exit");
-        pi.inputEnable = true;
+        //pi.inputEnable = true;
+    }
+
+    void OnAttackIdle() {
+        animator.SetLayerWeight(animator.GetLayerIndex("attack"), 0f);
     }
 
     void FixedUpdate() {

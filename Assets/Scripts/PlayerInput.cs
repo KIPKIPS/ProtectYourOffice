@@ -9,6 +9,10 @@ public class PlayerInput : MonoBehaviour {
     public string keyLeft = "a";
     public string keyRight = "d";
 
+    public int mouseLeft = 0;
+    public int mouseRight = 1;
+    public int mouseMiddle = 2;
+
     //输入信号值
     public float Dup;
     public float Dright;
@@ -17,7 +21,7 @@ public class PlayerInput : MonoBehaviour {
     private float targetDright;
     private float velocityDup;
     private float velocityDright;
-    //输入开关
+    //输入开关(软开关)
     public bool inputEnable = true;
     //持续输入类型信号
     public float Dmag;//动画的forward值,代表玩家是否有输入,玩家输入量
@@ -53,8 +57,8 @@ public class PlayerInput : MonoBehaviour {
         Dmag = Mathf.Sqrt(temp.x * temp.x + temp.y * temp.y);//计算玩家输入量
         Dvec = temp.x * transform.right + temp.y * transform.forward;//计算目标朝向
 
-        //攻击
-        bool newAttack = Input.GetKey(KeyCode.Q);
+        //攻击 鼠标左键Down下
+        bool newAttack = Input.GetMouseButton(mouseLeft);
         if (newAttack!=lastAttack&&newAttack==true) {
             attack = true;
         }
