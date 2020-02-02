@@ -34,6 +34,10 @@ public class AnimatorController : MonoBehaviour {
         }
 
         movingVec = pi.Dmag * model.transform.forward * walkSpeed;
+        //动画控制
+        if (pi.attack) {
+            animator.SetTrigger("attack");
+        }
     }
 
     void FixedUpdate() {

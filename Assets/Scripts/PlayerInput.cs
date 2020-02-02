@@ -19,9 +19,13 @@ public class PlayerInput : MonoBehaviour {
     private float velocityDright;
     //输入开关
     public bool inputEnable = true;
-
+    //持续输入类型信号
     public float Dmag;//动画的forward值,代表玩家是否有输入,玩家输入量
     public Vector3 Dvec;//目标朝向值
+
+    //Trigger类型信号
+    public bool attack;//当前attack值,如果不等于上一次lastAttack,则代表触发attack
+    public bool lastAttack;//上一次的attack值
 
     void Awake() {
         inputEnable = true;
@@ -48,6 +52,16 @@ public class PlayerInput : MonoBehaviour {
 
         Dmag = Mathf.Sqrt(temp.x * temp.x + temp.y * temp.y);//计算玩家输入量
         Dvec = temp.x * transform.right + temp.y * transform.forward;//计算目标朝向
+
+        //攻击
+        bool newAttack = Input.GetKey(KeyCode.Q);
+        if (newAttack!=lastAttack&&newAttack==true) {
+            attack = true;
+        }
+        else {
+            attack = false;
+        }
+        lastAttack = newAttack;
     }
     //球形函数
     Vector2  SquareToCircle(float x, float y) {
